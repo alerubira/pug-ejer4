@@ -1,0 +1,20 @@
+html
+  head
+    title Tabla de Animales
+  body
+    table
+      tr
+        th Animal
+        th Color
+        th Tiene Pelo
+        th Tiene 4 Patas
+      each animal in animales
+        tr
+          td= animal.animal
+          td(style=`background-color: ${animal.color}`)
+            | &nbsp;
+           
+          td
+            img(src=`${animal.tienePelo ? 'true.png' : 'false.png'}`, alt=`${animal.tienePelo}`)
+          td
+            img(src=`${animal.tiene4Patas ? 'true.png' : 'false.png'}`, alt=`${animal.tiene4Patas}`)
