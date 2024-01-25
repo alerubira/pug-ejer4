@@ -7,6 +7,8 @@ const animales = [
   { animal: 'Perro', color: '#234421', tienePelo: true, tiene4Patas: true },
   { animal: 'Loro', color: '#00ff23', tienePelo: true, tiene4Patas: false }
 ];
+// Agrega esto antes de la definición de tus rutas
+app.use(express.static('imagenes'));
 
 // Configurar el motor de vistas Pug
 app.set('view engine', 'pug');
