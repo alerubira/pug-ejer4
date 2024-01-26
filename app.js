@@ -4,11 +4,12 @@ const port = 3000;
 
 // Array de animales
 const animales = [
-  { animal: 'Perro', color: '#234421', tienePelo: true, tiene4Patas: true },
-  { animal: 'Loro', color: '#00ff23', tienePelo: true, tiene4Patas: false }
+  { animal: 'Perro', color: '#234421', tienePelo: true, tiene4Patas: true },//color haxadecimal
+  { animal: 'Loro', color: '#00ff23', tienePelo: true, tiene4Patas: false },
+  { animal: 'tiburon',color:'#333333', tienePelo: false, tiene4Patas: false}
 ];
 // Agrega esto antes de la definición de tus rutas
-app.use(express.static('imagenes'));
+app.use(express.static('imagenes'));//usa las carpetas estaticas,en este caso la carpeta imagenes
 
 // Configurar el motor de vistas Pug
 app.set('view engine', 'pug');
